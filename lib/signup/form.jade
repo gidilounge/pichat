@@ -1,0 +1,11 @@
+extend ../views/layout
+
+block content
+
+	h2 Signup here
+	form(action='/signup', method='post')
+		p: input(type='text', placeholder='Username')
+		p: input(type='password', placeholder='Password')
+		p: input(type='password', placeholder='Password Confirmation')
+		p: input(type='submit', value='Signup')
+	

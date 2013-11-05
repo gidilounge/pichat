@@ -1,0 +1,8 @@
+
+extend ../views/layout
+
+block content
+
+	div#first
+		each val, index in locals.jsonified
+			span= index + ': ' + val

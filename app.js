@@ -4,11 +4,23 @@ var express = require('express'),
 	io = require('socket.io').listen(server);
 	users = {};
 
+var login = require('login');
+var signup = require('signup');
+var userlist = require('user-list');
+
+app.use(login);
+app.use(signup);
+app.use(userlist);
+app.use(express.static(__dirname+'/static'));
+
+
 server.listen(3000);
+console.log('listening on port 3000');
 
 app.get('/', function(req, res) {
 
-	res.sendfile(__dirname + '/index.html');
+	res.sendfile(__dirname + '/static/index.html');
+
 
 });
 

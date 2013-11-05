@@ -1,0 +1,13 @@
+
+extend ../views/layout
+
+block content
+
+	div#signup
+		form(action="/newuser", method="post",)
+			p: input(type='text', name='username' placeholder='Username')
+			p: input(type='text', name='emailaddress' placeholder='Email Address')
+			p: input(type='password', name='password', placeholder='Password')
+			input(type="submit", value="submit")
+
+

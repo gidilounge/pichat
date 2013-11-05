@@ -2,8 +2,10 @@
 "name": "nodechat",
 "version": "0.0.1",
 "private": "true",
-"dependencies": {
+"dependencies" : {
 	"socket.io": "0.9.16",
-	"express": "3.2.6"
-}
+	"express": "3.2.6",
+	"jade": "*",
+	"request":"*"
+	}
 }
