@@ -1,13 +1,38 @@
+doctype 5
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title Stuff
 
-extend ../views/layout
+		link(href='css/bootstrap.css', rel='stylesheet', media='screen')
+		link(href='style.css', rel='stylesheet', media='screen')
 
-block content
+	
 
-	div#signup
-		form(action="/newuser", method="post",)
-			p: input(type='text', name='username' placeholder='Username')
-			p: input(type='text', name='emailaddress' placeholder='Email Address')
-			p: input(type='password', name='password', placeholder='Password')
-			input(type="submit", value="submit")
+		
+
+	body
+		.container.content
+			.row
+				.col-sm-3
+					div.widget-container.widget-avatar.boxed.boxed-yellow
+						div.inner
+							div.avatar
+								img(src='images/temp/avatar.png')
+								
+							h5 Jackdaniels
+							span.subtitle testing
 
 
+							a.btn.btn-brown.btn-follow
+								span Follow
+
+				.col-sm-3
+					h1 Signup
+					div#signup
+						form(action="/newuser", method="post",)
+							p: input(type='text', name='username' placeholder='Username' class='signupform')
+							p: input(type='text', name='emailaddress' placeholder='Email Address')
+							p: input(type='password', name='password', placeholder='Password')
+							input(type="submit", value="submit")

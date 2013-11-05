@@ -3,6 +3,17 @@ extend ../views/layout
 
 block content
 
-	div#first
-		each val, index in locals.jsonified
-			span= index + ': ' + val
+	.container.content
+			h5.playlistTitle= locals.jsonified.title
+			.row
+				each trackobject in locals.jsonified.tracks
+					.col-sm-3.songobject
+						div.widget-container.widget-avatar.boxed.boxed-yellow
+							div.inner
+								div.avatar
+									img(src='#{trackobject.thumbnail}')
+												
+								h5= trackobject.title
+								span.plays= trackobject.plays
+								span.url=trackobject.url
+								h6= trackobject.artist.name
